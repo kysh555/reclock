@@ -11,9 +11,10 @@
 
 ## plansテーブル
 
-| Column | Type   | Options     |
-| ------ | ------ | ----------- |
-| todo   | string | null: false |
+| Column | Type    | Options     |
+| ------ | ------- | ----------- |
+| todo   | string  | null: false |
+| done   | boolean |             |
 
 ### assosication
 - belongs_to :user
