@@ -1,19 +1,36 @@
-<div id="clock_area">
-  <div id="date_area">
-    date
-  </div>
-  <div id="time_area">
-    time
-  </div>
-  <div id="time-bar">
-    <div class="time-font">0</div>
-    <div class="time-font">9</div>
-    <div class="time-font">12</div>
-    <div class="time-font">15</div>
-    <div class="time-font">24</div>
-  </div>
-  <div id="time_line">
-    <div id="passed">
+<div id="contents">
+  <div id="clock_area">
+    <div id="date_area">
+      date
     </div>
+    <div id="time_area">
+      time
+    </div>
+    <div id="time-bar">
+      <div class="time-font">0</div>
+      <div class="time-font">9</div>
+      <div class="time-font">12</div>
+      <div class="time-font">15</div>
+      <div class="time-font">24</div>
+    </div>
+    <div id="time_line">
+      <div id="passed">
+      </div>
+    </div>
+  </div>
+  <div id="plans_area">
+    <div id="todo_area">
+      <% @plans.each do |plan| %>
+        <li class="todo-list">
+          <%= plan.todo %>
+        </li>
+      <% end %>
+    </div>
+    <div id="todo_form">
+      <%= form_with url: plans_path, local: true do |f| %>
+        <%= f.text_field :todo %>
+        <%= f.submit %>
+      <% end %>
+    <div>
   </div>
 </div>
