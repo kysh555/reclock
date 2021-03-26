@@ -14,6 +14,7 @@ ActiveRecord::Schema.define(version: 2021_03_23_025806) do
 
   create_table "plans", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "todo", null: false
+    t.boolean "done"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
