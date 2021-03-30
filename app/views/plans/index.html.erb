@@ -22,14 +22,15 @@
     <div id="todo_area">
       <% @plans.each do |plan| %>
         <li class="todo-list">
-          <%= plan.todo %>
+          <div class="todo" data-id=<%= plan.id %> data-done=<%= plan.done %>><%= plan.todo %> </div>
+          <div><%= link_to "×", "/plans/#{plan.id}", method: :delete, class: "delete-btn" %></div>
         </li>
       <% end %>
     </div>
     <div id="todo_form">
       <%= form_with url: plans_path, local: true do |f| %>
-        <%= f.text_field :todo %>
-        <%= f.submit %>
+        <%= f.text_field :todo, class: "text-form" %>
+        <%= f.submit class: "submit-btn" %>
       <% end %>
     <div>
   </div>
