@@ -5,7 +5,13 @@ class PlansController < ApplicationController
   end
 
   def create
-    plan = Plan.create(todo: params[:todo], done: false)
+    plan = Plan.create(todo: params[:todo])
+    redirect_to root_path
+  end
+
+  def destroy
+    plan = Plan.find(params[:id])
+    plan.destroy
     redirect_to root_path
   end
 
