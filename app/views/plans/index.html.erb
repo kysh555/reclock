@@ -6,6 +6,7 @@
     <div id="time_area">
       time
     </div>
+
     <div id="time-bar">
       <div class="time-font">0</div>
       <div class="time-font">9</div>
@@ -18,6 +19,7 @@
       </div>
     </div>
   </div>
+
   <div id="plans_area">
     <div id="todo_area">
       <% @plans.each do |plan| %>
@@ -27,10 +29,11 @@
         </li>
       <% end %>
     </div>
+
     <div id="todo_form">
-      <%= form_with url: plans_path, local: true do |f| %>
-        <%= f.text_field :todo, class: "text-form" %>
-        <%= f.submit class: "submit-btn" %>
+      <%= form_with url: plans_path, method: :post, id: 'form' do |f| %>
+        <%= f.text_field :todo, id: "text-form" %>
+        <%= f.submit 'save', id: "submit-btn" %>
       <% end %>
     <div>
   </div>
