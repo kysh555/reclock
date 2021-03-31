@@ -1,5 +1,6 @@
 html {
   height: 100%;
+  color: #4c4638;
 }
 
 body {
@@ -95,7 +96,7 @@ form {
   text-align: center;
 }
 
-.text-form {
+#text-form {
   padding: 5px;
   width: 65%;
   margin-right: 20px;
@@ -103,11 +104,12 @@ form {
   border: none;
 }
 
-.submit-btn {
+#submit-btn {
   border: none;
   background-color: ivory;
   padding: 5px 10px;
   font-size: 12px;
+  color: #706656;
 }
 
 .todo-list {
@@ -123,8 +125,8 @@ form {
 
 .delete-btn {
   text-decoration: none;
-  color: #8b7e6b;
   font-size: 16px;
+  color: #585142;
 }
 
 // TO DO 機能
