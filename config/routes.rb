@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  root to: 'plans#index'
+  resources :plans, only: [:create, :destroy]
+  get 'plans/:id', to: 'plans#done' 
 end
