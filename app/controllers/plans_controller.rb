@@ -5,8 +5,8 @@ class PlansController < ApplicationController
   end
 
   def create
-    plan = Plan.create(todo: params[:todo])
-    redirect_to root_path
+    plan = Plan.create(todo: params[:todo], done: false)
+    render json:{ plan: plan }
   end
 
   def destroy
@@ -24,7 +24,7 @@ class PlansController < ApplicationController
     end
 
     item = Plan.find(params[:id])
-    render json:{plan: item}
+    render json:{ plan: item }
   end
 
 end
