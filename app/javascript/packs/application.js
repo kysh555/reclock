@@ -7,8 +7,7 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
-require("../clock.js")
-require("../done.js")
+require('todo')
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
