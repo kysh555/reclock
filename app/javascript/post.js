@@ -19,6 +19,9 @@ function post() {
           <div class="todo" data-id=${item.id} data-done=${item.done}>
             ${item.todo}
           </div>
+          <div class="scheduled_date">
+            ${item.scheduled_date.MM}月
+          </div>
           <div>
             <a href='/plans/${item.id}' data-method='delete' class='delete-btn'>×</a>
           </div>

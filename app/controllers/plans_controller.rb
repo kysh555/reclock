@@ -5,7 +5,7 @@ class PlansController < ApplicationController
   end
 
   def create
-    plan = Plan.create(todo: params[:todo], done: false)
+    plan = Plan.create(todo: params[:todo], scheduled_date: params[:scheduled_date], done: false)
     render json:{ plan: plan }
   end
 
