@@ -32,6 +32,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: default;
 }
 
 #time_area {
@@ -41,6 +42,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: default;
 }
 
 #time-bar {
@@ -58,6 +60,7 @@ body {
 
 .time-font {
   font-size: 10px;
+  cursor: default;
 }
 
 #passed {
@@ -96,6 +99,13 @@ form {
   text-align: center;
 }
 
+#date-form {
+  color: #706656;
+  border: 1px solid #706656;
+  text-align: left;
+  margin-bottom: 6px;
+}
+
 #text-form {
   padding: 5px;
   width: 65%;
@@ -110,6 +120,7 @@ form {
   padding: 5px 10px;
   font-size: 12px;
   color: #706656;
+  cursor: pointer;
 }
 
 .todo-list {
@@ -123,6 +134,14 @@ form {
   width: 100%;
 }
 
+.todo {
+  cursor: pointer;
+}
+
+.scheduled_date {
+  cursor: default;
+}
+
 .delete-btn {
   text-decoration: none;
   font-size: 16px;
@@ -134,8 +153,5 @@ form {
   text-decoration: line-through;
 }
 
-.todo[data-done="false"] {
-  text-decoration: none;
-}
 // TO DO 機能
 // TO DO リスト
