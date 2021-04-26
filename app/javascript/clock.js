@@ -17,7 +17,7 @@ function tick () {
     const weekdays = ['日','月','火','水','木','金','土'];
 
     const dateHtml = `
-    ${year} / ${month} / ${day}  (${weekdays[week]})
+    ${year} / ${month + 1} / ${day}  (${weekdays[week]})
     `
     const timeHtml = `
     ${hour} : ${min} : ${sec}
